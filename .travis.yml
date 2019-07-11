@@ -2,7 +2,7 @@ lang: ruby
 before_install:
   - gem install yard
 after_success:
-  - bash ci/build_docs.sh
+  - yard
 deploy:
   provider: pages
   local_dir: doc
