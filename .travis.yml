@@ -1,0 +1,13 @@
+lang: ruby
+before_install:
+  - gem install yard
+after_success:
+  - ci/build_docs.sh
+deploy:
+  provider: pages
+  local_dir: doc
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: gh-pages
